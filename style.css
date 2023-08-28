@@ -1,5 +1,26 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+:root{
+     
+    --backgroud-color-site: #ffffff;
+    --text-color: #000000;
+    --hover-grey: #abb8c3;
+    --hover-red: #e60019;
+
+     /*FONTS  
+    --font-link-p: "Georgia, san-serif";
+    --card-category-h2:"Graphik Semibold, san-serif";
+    --card-title-h3: "Publico Headline Bold, san-serif";
+    --card-title-bold-big: "Publico Banner Ultra, san-serif";*/
+}
+ /*graphic sembold title and time , the latest pubblico banner ultra,h3 pubblico hdeadline bold , p georgia helvetica*/
+
+ .story-grid-ul {
+    list-style: none;
+  }
+
+a{
+ color:black;
+ text-decoration:none;
+}
+a:hover{
+    color:var(--hover-grey);
 }
