@@ -1,5 +1,260 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+@import url("https://fonts.cdnfonts.com/css/georgia");
+@import url("https://db.onlinewebfonts.com/c/2aa5f6db10ab7b69465c95555c235503?family=Graphik-Semibold%22");
+@import url("https://db.onlinewebfonts.com/c/18388ffae47d04063d2b24fc4a9cff60?family=Publico+Headline+Web+Bold+Regular%22");
+@import url("https://db.onlinewebfonts.com/c/4b034aa42968984e20335429f8370be8?family=Publico+Banner+Web+Ultra+Regular%22");
+
+:root {
+  /* COLORS  */
+  --backgroud-color-site: #ffffff;
+  --text-color: #000000;
+  --hover-grey: #abb8c3;
+  --hover-red: #e60019;
+
+  /* FONTS  */
+  --font-link-p: "Georgia, san-serif";
+  --card-category-h2: "Graphik Semibold, san-serif";
+  --card-title-h3: "Publico Headline Bold, san-serif";
+  --card-title-bold-big: "Publico Banner Ultra, san-serif";
 }
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* HEADER */
+
+#header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: 130px;
+  padding: 12px 0px;
+  margin: 0 auto;
+}
+
+#links-header-left {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  white-space: nowrap;
+  padding-left: 40px;
+}
+
+#links-header-left a {
+  text-decoration: none;
+  color: var(--text-color);
+  font-size: 15px;
+  font-family: var(--font-link-p);
+  letter-spacing: 1px;
+}
+
+#links-header-left a:hover {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  color: var(--hover-grey);
+}
+
+#border-link-left {
+  position: relative;
+  bottom: 50%;
+  width: 15%;
+  height: 1px;
+  background-color: black;
+  margin: 4px 0px;
+}
+
+#links-header-right {
+  display: flex;
+  flex-direction: column;
+  text-align: right;
+  position: relative;
+  padding-right: 40px;
+}
+
+#links-header-right a {
+  text-decoration: none;
+  color: var(--text-color);
+  font-size: 15px;
+  font-family: var(--font-link-p);
+  letter-spacing: 1px;
+}
+
+#links-header-right a:hover {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  color: var(--hover-grey);
+}
+
+#border-link-right {
+  position: relative;
+  left: 75px;
+  width: 15%;
+  height: 1px;
+  background-color: black;
+  margin: 4px 0px;
+}
+
+#logo img {
+  width: 500px;
+}
+
+#bannerSubscribe {
+  display: none;
+  z-index: 1;
+  position: absolute;
+  top: 130%;
+  left: 50%;
+  transform: translateX(-90%);
+  width: 450px;
+  height: 250px;
+  background-color: white;
+  border: 2px solid black;
+}
+
+a#subscribe:hover + #bannerSubscribe {
+  display: block;
+}
+
+#bannerSubscribe:hover {
+  display: block;
+}
+
+#boximg {
+  display: flex;
+  align-items: left;
+  justify-content: left;
+  padding: 10px;
+}
+
+#boximg img {
+  width: 180px;
+}
+
+#textBanner {
+  font-family: var(--card-title-bold-big);
+  font-weight: 800;
+  max-width: 180px;
+  text-transform: uppercase;
+  font-size: 25px;
+  text-align: left;
+  padding: 10px;
+}
+
+#header-separator {
+  width: 100vw;
+  height: 6px;
+  background-color: black;
+}
+
+#header-separator-2 {
+  width: 100vw;
+  margin-top: 4px;
+  height: 1px;
+  background-color: black;
+}
+
+#menu-hamburger-desktop img {
+  width: 70px;
+  padding-left: 24px;
+}
+
+/* NAV */
+
+#nav {
+  margin-top: 4px;
+  width: 100vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+  margin-bottom: 16px; /* PER SEZIONE 2*/
+}
+
+#menu-hamburger-mobile img {
+  width: 70px;
+  padding-left: 24px;
+}
+
+#nav-links ul {
+  list-style: none;
+}
+
+#nav-links ul li {
+  display: inline;
+  padding: 0px 14px;
+}
+
+#nav-links ul li a {
+  text-decoration: none;
+  color: var(--text-color);
+  font-size: 14px;
+  font-family: var(--font-link-p);
+  font-weight: 500;
+  letter-spacing: 1px;
+}
+
+#nav-links ul li a:hover {
+  text-decoration: underline;
+  text-decoration-thickness: 6px;
+  text-underline-offset: 13px;
+  color: var(--hover-red);
+  transition: 0.2s;
+}
+
+#search img {
+  width: 70px;
+  padding-right: 24px;
+}
+
+
+
+@media screen and (min-width: 768px) {
+  #header-separator-2 {
+    display: none;
+  }
+
+  #menu-hamburger-desktop {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  #nav {
+    display: none;
+  }
+
+  #links-header-left {
+    display: none;
+  }
+
+  #links-header-right a:first-child {
+    display: none;
+  }
+
+  #links-header-right #subscribe {
+    font-size: 8px;
+    font-weight: bold;
+    padding-right: 15px;
+  }
+
+  #border-link-right {
+    display: none;
+  }
+
+  #logo img {
+    width: 300px;
+  }
+
+  #bannerSubscribe {
+    top: 450%;
+    left: 20%;
+    transform: translateX(-90%);
+  }
+}
+
+/* END HEADER AND NAV MANFREDI*/
