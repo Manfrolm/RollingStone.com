@@ -1,64 +1,52 @@
-
 @import url("https://fonts.cdnfonts.com/css/georgia");
 @import url("https://db.onlinewebfonts.com/c/2aa5f6db10ab7b69465c95555c235503?family=Graphik-Semibold%22");
 @import url("https://db.onlinewebfonts.com/c/18388ffae47d04063d2b24fc4a9cff60?family=Publico+Headline+Web+Bold+Regular%22");
 @import url("https://db.onlinewebfonts.com/c/4b034aa42968984e20335429f8370be8?family=Publico+Banner+Web+Ultra+Regular%22");
 
-
-  
 /* FONTS */
-
 
 @font-face {
   font-family: "Graphik Semibold";
-  src: url(/Graphik-Semibold-Web.woff2);
+  src: url(fonts/Graphik-Semibold-Web.woff2);
 }
 
 @font-face {
   font-family: "Publico Banner Ultra";
-  src: url(/PublicoBanner-Ultra-Web.woff2);
+  src: url(fonts/PublicoBanner-Ultra-Web.woff2);
 }
 
 @font-face {
   font-family: "Publico Banner UltraItalic";
-  src: url(/PublicoBanner-UltraItaliac-Web.woff2);
+  src: url(fonts/PublicoBanner-UltraItaliac-Web.woff2);
 }
 
 @font-face {
   font-family: "Publico Banner Bold";
-  src: url(/PublicoHeadline-Bold-Web.woff2);
+  src: url(fonts/PublicoHeadline-Bold-Web.woff2);
 }
 
 @font-face {
   font-family: "Publico Banner UltraItalic";
-  src: url(/PublicoHeadline-BoldItalic-Web.woff2);
+  src: url(fonts/PublicoHeadline-BoldItalic-Web.woff2);
 }
 
 @font-face {
   font-family: "Publico Headline Roman";
-  src: url(/PublicoHeadline-Roman-Web.woff2);
+  src: url(fonts/PublicoHeadline-Roman-Web.woff2);
 }
 
-
-
-
 :root {
-
   --backgroud-color-site: #ffffff;
   --text-color: #000000;
   --hover-grey: #abb8c3;
   --hover-red: #e60019;
 
-
   /* FONTS  */
-  --font-link-p: "Georgia, san-serif";
-  --card-category-h2: "Graphik Semibold, san-serif";
-  --card-title-h3: "Publico Headline Bold, san-serif";
-  --card-title-bold-big: "Publico Banner Ultra, san-serif";
+  --font-link-p: "Georgia", san-serif;
+  --card-category-h2: "Graphik Semibold", san-serif;
+  --card-title-h3: "Publico Headline Bold", san-serif;
+  --card-title-bold-big: "Publico Banner Ultra", san-serif;
 }
-
-
-
 
 * {
   list-style-type: none;
@@ -67,18 +55,16 @@
   box-sizing: border-box;
 }
 
-
-/* HEADER */
+/* Inizio Header e Nav Manfredi */
 
 #header {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
-  height: 130px;
-  padding: 12px 0px;
   margin: 0 auto;
-  width: 1260px;
+  height: 130px;
+  padding: 12px 20px;
 }
 
 #links-header-left {
@@ -117,7 +103,6 @@
   flex-direction: column;
   text-align: right;
   position: relative;
-  padding-right: 40px;
 }
 
 #links-header-right a {
@@ -207,14 +192,11 @@ a#subscribe:hover + #bannerSubscribe {
   padding-left: 24px;
 }
 
-/* NAV */
-
 #nav {
   margin-top: 4px;
-  width: 100%;
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
   border-top: 1px solid black;
   border-bottom: 1px solid black;
@@ -232,7 +214,7 @@ a#subscribe:hover + #bannerSubscribe {
 
 #nav-links ul li {
   display: inline;
-  padding: 0px 14px;
+  padding: 0px 10px;
 }
 
 #nav-links ul li a {
@@ -257,6 +239,47 @@ a#subscribe:hover + #bannerSubscribe {
   padding-right: 24px;
 }
 
+/* Inizio Media Query Manfredi 2*/
+
+@media screen and (max-width: 768px) {
+  #header {
+    width: 100%;
+    justify-content: space-around;
+    height: 75px;
+  }
+
+  #nav {
+    display: none;
+  }
+
+  #links-header-left {
+    display: none;
+  }
+
+  #links-header-right a:first-child {
+    display: none;
+  }
+
+  #links-header-right #subscribe {
+    font-size: 8px;
+    font-weight: bold;
+    padding-right: 15px;
+  }
+
+  #border-link-right {
+    display: none;
+  }
+
+  #logo img {
+    width: 300px;
+  }
+
+  #bannerSubscribe {
+    top: 450%;
+    left: 20%;
+    transform: translateX(-90%);
+  }
+}
 
 @media screen and (min-width: 768px) {
   #header-separator-2 {
@@ -267,7 +290,10 @@ a#subscribe:hover + #bannerSubscribe {
     display: none;
   }
 }
+/* Fine Media Query Manfredi */
+/* Fine Header e Nav Manfredi */
 
+/* Inizio Hero Section Luca e Claudia*/
 
 .wrapHero {
   display: flex;
@@ -339,12 +365,12 @@ a#subscribe:hover + #bannerSubscribe {
   line-height: 1.35;
 }
 
-.imgMediaQuery img{
-display: none;
+.imgMediaQuery img {
+  display: none;
 }
 
-.containerTitleBoxcardLeft{
-  display:none
+.containerTitleBoxcardLeft {
+  display: none;
 }
 
 .authorCardleft,
@@ -493,7 +519,6 @@ display: none;
   flex-direction: column;
   gap: 5px;
   width: 100%;
- 
 }
 
 .linelow {
@@ -573,52 +598,16 @@ display: none;
   opacity: 0.6;
 }
 
-@media (max-width:1200px){
-  .cardLow:last-child{
+@media (max-width: 1200px) {
+  .cardLow:last-child {
     display: none;
   }
 
-  .lineCard:last-child{
+  .lineCard:last-child {
     display: none;
   }
 }
 
-
-@media screen and (max-width: 768px) {
-  #nav {
-    display: none;
-  }
-
-  #links-header-left {
-    display: none;
-  }
-
-  #links-header-right a:first-child {
-    display: none;
-  }
-
-  #links-header-right #subscribe {
-    font-size: 8px;
-    font-weight: bold;
-    padding-right: 15px;
-  }
-
-  #border-link-right {
-    display: none;
-  }
-
-  #logo img {
-    width: 300px;
-  }
-
-  #bannerSubscribe {
-    top: 450%;
-    left: 20%;
-    transform: translateX(-90%);
-  }
-}
-
-/* END HEADER AND NAV MANFREDI*/
 @media (max-width: 1024px) {
   .wrapHero {
     display: flex;
@@ -640,10 +629,7 @@ display: none;
   .topCenterCard {
     order: 1;
     width: 100%;
-   
   }
-  
- 
 
   .topRightCard {
     order: 2;
@@ -664,7 +650,6 @@ display: none;
     margin-right: 24px;
   }
 
- 
   .textWhiteBox {
     text-decoration: underline;
     text-underline-offset: 15px;
@@ -700,7 +685,6 @@ display: none;
 
   .topRightCard img {
     width: 100%;
-   
   }
 
   .paragraphRight {
@@ -732,16 +716,16 @@ display: none;
 
   .cardLowSide {
     max-height: 132px;
-    overflow-x:scroll ;
+    overflow-x: scroll;
     overflow-y: hidden;
     flex-wrap: nowrap;
   }
 
-  .cardLow:last-child{
-    display:contents;
+  .cardLow:last-child {
+    display: contents;
   }
 
-  .lineCard:last-child{
+  .lineCard:last-child {
     display: contents;
   }
 
@@ -752,7 +736,7 @@ display: none;
     border: none;
     padding-left: 0;
     padding-right: 0;
-    padding-top:10px
+    padding-top: 10px;
   }
 
   .cardtopleft {
@@ -761,33 +745,30 @@ display: none;
     line-height: 1.35;
     border-bottom: 1px solid black;
     padding-top: 24px;
-     }
+  }
 
-  .cardtopleft:last-child{
+  .cardtopleft:last-child {
     border: none;
   }
 
-  .imgMediaQuery img{
+  .imgMediaQuery img {
     display: inline;
     max-width: 100%;
-    }
+  }
 
-    .topLeftCard h3 {
-      font-size: 18px;
-      font-weight: bolder;
-      font-family: var(--card-title-h3);
-    }
+  .topLeftCard h3 {
+    font-size: 18px;
+    font-weight: bolder;
+    font-family: var(--card-title-h3);
+  }
 }
 
-
-@media (max-width: 768px){
- 
- 
-  .topCenterCard{
+@media (max-width: 768px) {
+  .topCenterCard {
     border-bottom: 1px solid black;
     padding-bottom: 32px;
   }
- 
+
   .containerTitleBox {
     display: flex;
     flex-direction: column;
@@ -795,7 +776,7 @@ display: none;
     padding-top: 16px;
     padding-left: 16px;
     padding-right: 16px;
-    margin-left:16px;
+    margin-left: 16px;
     transform: translateY(-50%);
     align-self: flex-start;
   }
@@ -817,7 +798,7 @@ display: none;
 
   .topCenterCard p {
     text-align: left;
-    margin:0;
+    margin: 0;
   }
 
   .authorCardCenter {
@@ -827,40 +808,35 @@ display: none;
     align-self: flex-start;
   }
 
- 
-  .topLeftCard{
+  .topLeftCard {
     align-items: center;
-    
   }
-  .containerTitleBoxcardLeft{
+  .containerTitleBoxcardLeft {
     display: flex;
     flex-direction: column;
     background-color: white;
     padding-top: 16px;
     padding-left: 16px;
     padding-right: 16px;
-    margin-left:16px;
+    margin-left: 16px;
     transform: translateY(-50%);
     align-self: flex-start;
     width: 130px;
-    }
+  }
 
-  .textWhiteBoxLeft h2{
+  .textWhiteBoxLeft h2 {
     font-size: 15px;
     font-family: var(--card-category-h2);
     text-decoration: underline;
     text-underline-offset: 15px;
     border-bottom: solid 5px black;
     padding-bottom: 1px;
-   
   }
 
-  .topRightCard{
-    padding-top:32px
+  .topRightCard {
+    padding-top: 32px;
   }
-
 }
-
 
 a {
   color: black;
@@ -872,7 +848,6 @@ a:hover {
 .homepage-secondary-stories {
   display: flex;
   flex-direction: column;
-  /* width: 20vw; */
   max-width: 1200px;
 }
 
@@ -883,13 +858,13 @@ a:hover {
   font-family: var(--card-category-h2);
 }
 
-ul {
+ul#story-grid-list.story-grid-ul {
   display: block;
   margin-block-start: 1em;
   margin-block-end: 1em;
   margin-inline-start: 0px;
   margin-inline-end: 0px;
-  padding-inline-start: 40px;
+  /* padding-inline-start: 40px; */
 }
 .the-latest {
   position: relative;
@@ -942,7 +917,7 @@ ul {
   margin: auto;
 }
 
-.box-container2-secondary{
+.box-container2-secondary {
   display: flex;
   flex-direction: column;
   margin-left: 56px;
@@ -1313,4 +1288,3 @@ section::after {
     display: none;
   }
 }
-
