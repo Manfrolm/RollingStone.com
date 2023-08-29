@@ -1145,9 +1145,9 @@ section::after {
 }
 
 .by {
-  font-size: 22px;
+  font-size: 14px;
   font-family: var(--card-title-h3);
-  color: var(--hover-grey);
+  padding-right: 4px;
 }
 
 .goodell {
