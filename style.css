@@ -6,11 +6,22 @@
 
 
   
+/* FONTS */
 
+
+@font-face {
+  font-family: "Graphik Semibold";
+  src: url(/Graphik-Semibold-Web.woff2);
+}
 
 @font-face {
   font-family: "Publico Banner Ultra";
   src: url(/PublicoBanner-Ultra-Web.woff2);
+}
+
+@font-face {
+  font-family: "Publico Banner UltraItalic";
+  src: url(/PublicoBanner-UltraItaliac-Web.woff2);
 }
 
 @font-face {
@@ -19,9 +30,17 @@
 }
 
 @font-face {
-  font-family: "Graphik Semibold";
-  src: url(/Graphik-Semibold-Web.woff2);
+  font-family: "Publico Banner UltraItalic";
+  src: url(/PublicoHeadline-BoldItalic-Web.woff2);
 }
+
+@font-face {
+  font-family: "Publico Headline Roman";
+  src: url(/PublicoHeadline-Roman-Web.woff2);
+}
+
+
+
 
 :root {
 
