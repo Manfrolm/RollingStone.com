@@ -1083,23 +1083,8 @@ ul#story-grid-list.story-grid-ul {
   font-size: 20px;
   font-weight: 400%;
 }
-.the-latest::before,
-.the-latest::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  width: 10px;
-  height: 5px;
-  background-color: black;
-  width: fit-content;
-}
-.the-latest::before {
-  top: -10px;
-  width: 100%;
-}
-.the-latest::after {
-  top: -10px;
-}
+
+
 
 .the-latest-read-more {
   border-top: 1px solid black;
@@ -1290,18 +1275,18 @@ p {
   max-width: 986px;
 }
 
-section,
+/*section,
 .card-label-box-korean {
   border-top: 2px solid black;
   border-bottom: 2px solid black;
   position: relative;
-}
+}*/
 
 .card-label-box-korean {
   border-top: none;
 }
 
-section::before,
+/* section::before, 
 section::after,
 .card-label-box-korean::after {
   content: "";
@@ -1318,7 +1303,7 @@ section::before {
 
 section::after {
   bottom: 3px;
-}
+}*/
 
 .music-section {
   padding: 2rem 1rem;
