@@ -57,14 +57,19 @@
 
 /* Inizio Header e Nav Manfredi */
 
+#header-wrap{
+  max-width: 1260px;
+  margin: 0 auto;
+}
+
 #header {
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   margin: 0 auto;
   height: 130px;
-  padding: 12px 20px;
+  padding: 12px 10px;
 }
 
 #links-header-left {
@@ -1049,7 +1054,7 @@ a:hover {
 .homepage-secondary-stories {
   display: flex;
   flex-direction: column;
-  max-width: 1200px;
+  max-width: 1260px;
 }
 
 .story-grid-title {
@@ -1074,7 +1079,6 @@ ul#story-grid-list.story-grid-ul {
   width: fit-content;
   padding-top: 10px;
   padding-bottom: 10px;
-  padding-left: 20%;
   font-family: var(--card-title-bold-big);
   font-size: 20px;
   font-weight: 400%;
@@ -1096,9 +1100,7 @@ ul#story-grid-list.story-grid-ul {
 .the-latest::after {
   top: -10px;
 }
-.container-latest {
-  padding-left: 10%;
-}
+
 .the-latest-read-more {
   border-top: 1px solid black;
   width: fit-content;
@@ -1126,7 +1128,6 @@ ul#story-grid-list.story-grid-ul {
 
 .story-grid-li {
   margin-bottom: 20px;
-  padding-left: 10%;
 }
 
 .story-grid-time {
