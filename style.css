@@ -323,6 +323,16 @@ a#subscribe:hover + #bannerSubscribe {
   max-width: 100%;
 }
 
+.lineLeft1{
+  display: none;
+  
+}
+
+.lineLeft2{
+  display: none;
+  
+}
+
 .topLeftCard h2 {
   font-size: 11px;
   text-decoration-line: underline;
@@ -378,6 +388,8 @@ a#subscribe:hover + #bannerSubscribe {
 .authorRight a {
   letter-spacing: 1.5px;
 }
+
+/* Center card Hero */
 
 .topCenterCard {
   display: flex;
@@ -446,6 +458,8 @@ a#subscribe:hover + #bannerSubscribe {
   text-decoration: underline;
 }
 
+/* Right card hero */
+
 .topRightCard {
   display: flex;
   flex-direction: column;
@@ -454,7 +468,7 @@ a#subscribe:hover + #bannerSubscribe {
 }
 
 .topRightCard img {
-  width: 262px;
+  max-width: 262px;
   padding: 0px 0px 4px;
 }
 
@@ -487,6 +501,10 @@ a#subscribe:hover + #bannerSubscribe {
   font-family: var(--font-link-p);
 }
 
+.topRightCard p {
+  display: inline;
+}
+
 .authorCardRight {
   font-size: 13px;
   font-family: var(--font-link-p);
@@ -500,10 +518,11 @@ a#subscribe:hover + #bannerSubscribe {
 }
 
 .lines {
-  width: 262px;
+  max-width: 262px;
   height: 1px;
   background-color: #000000;
 }
+
 
 .topRightCard h3:hover {
   opacity: 0.6;
@@ -514,15 +533,17 @@ a#subscribe:hover + #bannerSubscribe {
   opacity: 0.6;
 }
 
+/* Low Side Card Hero */
+
 .wrappedLowSide {
   display: flex;
   flex-direction: column;
   gap: 5px;
-  width: 100%;
+ max-width: 100%;
 }
 
 .linelow {
-  width: 100%;
+ max-width: 100%;
   height: 0.5px;
   background-color: #000000;
 }
@@ -531,7 +552,7 @@ a#subscribe:hover + #bannerSubscribe {
   display: flex;
   flex-direction: row;
   padding-top: 20px;
-  gap: 20px;
+  gap: 24px;
   max-width: 100%;
   height: 100%;
 }
@@ -598,7 +619,46 @@ a#subscribe:hover + #bannerSubscribe {
   opacity: 0.6;
 }
 
-@media (max-width: 1200px) {
+/* Media Query Hero */
+
+@media (max-width: 1260px) {
+  .containerHero {
+    display: flex;
+    flex-direction: row;
+    gap: 42px;}
+
+    .topLeftCard{
+      margin-left: 16px;
+      margin-right: 16px;
+      padding-left: 12px;
+    padding-right: 12px;
+      }
+  
+    .cardtopleft{
+      padding-left: 12px;
+      padding-right: 12px;
+    }
+  
+    .topLeftCard p{
+      display: none;
+    }
+  
+    .topRightCard{
+      margin-right: 16px;
+    }
+
+
+  .wrappedLowSide{
+    margin-left: 16px;
+    margin-right: 16px;
+  }
+
+  
+  .lineBottomCard {
+     margin-top: 12px;
+    
+  }
+
   .cardLow:last-child {
     display: none;
   }
@@ -606,15 +666,23 @@ a#subscribe:hover + #bannerSubscribe {
   .lineCard:last-child {
     display: none;
   }
+
+  .lineCard{
+    height: 98px;
+  }
+
+  
+  
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1000px) {
   .wrapHero {
     display: flex;
     flex-direction: column;
     margin-top: 24px;
     padding: 0;
     margin: auto;
+    gap:5px
   }
 
   .containerHero {
@@ -638,10 +706,15 @@ a#subscribe:hover + #bannerSubscribe {
     padding: 0;
   }
 
-  .topLeftCard {
+
+  .topLeftCard{
     order: 3;
     width: 100vw;
-  }
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: 0;
+  padding-right: 0;
+    }
 
   .topCenterCard h3 {
     align-self: flex-start;
@@ -684,7 +757,7 @@ a#subscribe:hover + #bannerSubscribe {
   }
 
   .topRightCard img {
-    width: 100%;
+    max-width: 100%;
   }
 
   .paragraphRight {
@@ -700,7 +773,7 @@ a#subscribe:hover + #bannerSubscribe {
   }
 
   .lines {
-    width: 100%;
+    max-width: 100%;
     background-color: #000000;
     margin-top: 32px;
     margin-bottom: 32px;
@@ -709,29 +782,7 @@ a#subscribe:hover + #bannerSubscribe {
   .topLeftCard {
     display: flex;
     flex-direction: column;
-    border-left: 1px solid black;
-    border-right: 1px solid black;
     flex-wrap: nowrap;
-  }
-
-  .cardLowSide {
-    max-height: 132px;
-    overflow-x: scroll;
-    overflow-y: hidden;
-    flex-wrap: nowrap;
-  }
-
-  .cardLow:last-child {
-    display: contents;
-  }
-
-  .lineCard:last-child {
-    display: contents;
-  }
-
-  .topLeftCard {
-    display: flex;
-    flex-direction: column;
     max-width: 100%;
     border: none;
     padding-left: 0;
@@ -739,6 +790,14 @@ a#subscribe:hover + #bannerSubscribe {
     padding-top: 10px;
   }
 
+  .cardtopleft p{
+    display: contents;
+  }
+
+  .lineCard{
+    display:none;
+  }
+ 
   .cardtopleft {
     width: 100%;
     padding: 0;
@@ -761,9 +820,27 @@ a#subscribe:hover + #bannerSubscribe {
     font-weight: bolder;
     font-family: var(--card-title-h3);
   }
+
+  .topLeftCard span, .topLeftCard .authorCardleft{
+    font-size: 12px;
+  }
+
+  
+
+  .wrappedLowSide{
+    padding-bottom: 20px;
+  }
+
+  .lineBottomCard{
+    display: none;
+  }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 766px) {
+  .wrapHero{
+    margin-top: 16px;
+  }
+
   .topCenterCard {
     border-bottom: 1px solid black;
     padding-bottom: 32px;
@@ -799,6 +876,7 @@ a#subscribe:hover + #bannerSubscribe {
   .topCenterCard p {
     text-align: left;
     margin: 0;
+    display: inline;
   }
 
   .authorCardCenter {
@@ -808,9 +886,21 @@ a#subscribe:hover + #bannerSubscribe {
     align-self: flex-start;
   }
 
-  .topLeftCard {
-    align-items: center;
+ 
+  .cardtopleft{
+    padding-bottom: 12px;
   }
+
+  .cardtopleft .by, .cardtopleft .authorCardleft{
+    font-size: 12px;
+  }
+
+ 
+
+  #firstH3Left{
+    font-size: 23px;
+  }
+
   .containerTitleBoxcardLeft {
     display: flex;
     flex-direction: column;
@@ -825,6 +915,7 @@ a#subscribe:hover + #bannerSubscribe {
   }
 
   .textWhiteBoxLeft h2 {
+    width: 95px;
     font-size: 15px;
     font-family: var(--card-category-h2);
     text-decoration: underline;
@@ -832,11 +923,121 @@ a#subscribe:hover + #bannerSubscribe {
     border-bottom: solid 5px black;
     padding-bottom: 1px;
   }
+ 
 
   .topRightCard {
     padding-top: 32px;
+    
   }
+
+  .lineMediaQueryLeft{
+    display: flex;
+    flex-direction: column;
 }
+
+  .lineLeft1{
+    display: inline;
+    width: 100%;
+    height: 4px;
+    background-color: #000000;
+    margin-top: 32px;
+    border-bottom: 1px solid black;
+    
+  }
+
+ .lineLeft2{
+    display: inline;
+    width: 100%;
+    height: 1px;
+    background-color: #000000;
+    margin-top: 5px;
+    border-bottom: 1px solid black;
+    
+  }
+  
+  #firstCardLeftTitle{
+    display: none;
+  }
+
+  .cardtopleft:first-child h3{
+    font-size: 23px;
+    font-weight: bolder;
+  }
+
+  .cardtopleft:first-child p {
+    display:block;
+    padding-bottom: 12px;
+  }
+
+ 
+
+  .cardLow {
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+    height: 98px;
+    border-right: 1px solid black;
+    padding-right: 16px;
+  }
+
+
+  .cardLowSide {
+    display: flex;
+    flex-direction: row;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    gap: 24px;
+    width: 100%;
+    overflow-x: scroll;
+    overflow-y:hidden;
+    flex-wrap:nowrap;
+  }
+
+
+  .cardLowSide p {
+    display: block;
+  }
+
+ 
+ .cardLow:last-child {
+    display: contents;
+  }
+
+      
+  .textCardLow {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+  
+  .textCardLow h3 {
+    white-space: nowrap;
+    font-size: 11px;
+    font-family: var(--card-category-h2);
+    text-decoration-line: underline;
+    text-underline-offset: 4px;
+    color: var(--text-color);
+    margin:0;
+    padding: 0;
+  }
+  
+  .textCardLow a {
+    text-decoration: none;
+  }
+  
+  .textCardLow p {
+    width: 128px;
+    font-size: 14px;
+    font-family: var(--font-link-p);
+    color: var(--text-color);
+  }
+
+}
+
+/* Fine Media Query  */
+/* Fine sezione Hero Luca e Claudia*/
+
+/* Inizio sezione "The Latest" Nico e Davide */
 
 a {
   color: black;
