@@ -1125,7 +1125,6 @@ height: 5px;
   flex-direction: row;
   margin: auto;
   padding-top:56px;
-  border-top: 1px solid black;
 
 }
 
@@ -1490,7 +1489,7 @@ section::after {
     width: 100%;
   }
 }
-@media screen and (max-width: 765px) {
+@media screen and (max-width: 768px) {
   .homepage-secondary-stories {
     display: flex;
     flex-direction: column;
@@ -1523,7 +1522,7 @@ section::after {
 }
 
 #footer-box{
-  width: 1250px;
+  width: 1260px;
   display: flex;
   justify-content: space-around;
   flex-direction: row;
@@ -1681,7 +1680,9 @@ section::after {
   color: var(--hover-red);
 }
 
-
-
-
+@media screen and (max-width: 1260px){
+  #footer-image{
+    display: none;
+  }
+}
 
