@@ -1093,10 +1093,7 @@ ul#story-grid-list.story-grid-ul {
 
 }
 
-.the-latest{
 
-
-}
 
 #borderContainer-Latest{
   background-color: #000000;
@@ -1161,6 +1158,7 @@ height: 5px;
   font-family: var(--card-title-h3);
   font-size: 16px;
 }
+
 .stories-content-secondary-card-2-label {
   border-bottom: 1px solid black;
   padding-top: 10px;
@@ -1199,8 +1197,8 @@ height: 5px;
 }
 
 .stories-content-secondary-card-1-image {
-  width: 500px;
-  height: 400px;
+  max-width: 500px;
+  max-height: 400px;
   overflow: hidden;
 }
 
@@ -1472,6 +1470,17 @@ section::after {
 /*  */
 
 @media screen and (max-width: 1000px) {
+
+
+   .stories-content-secondary {
+      flex-direction: column;
+      max-width: 100%;
+    }
+    .stories-content-secondary-card-1-image {
+      height: 100%;
+      width: 100%;
+    }
+    
   .homepage-secondary-stories {
     display: flex;
     flex-direction: column;
