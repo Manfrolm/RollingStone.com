@@ -55,13 +55,6 @@
   box-sizing: border-box;
 }
 
-#container{
-  position: sticky;
-  top: 0;
-  background-color: #FFFFFF;
-  z-index: 100;
-}
-
 /* Inizio Header e Nav Manfredi */
 
 #header-wrap {
@@ -141,7 +134,7 @@
 }
 
 #logo img {
-  width: 500px;
+  max-width: 500px;
 }
 
 #bannerSubscribe {
@@ -281,7 +274,7 @@ a#subscribe:hover + #bannerSubscribe {
   }
 
   #logo img {
-    width: 300px;
+    width: 200px;
   }
 
   #bannerSubscribe {
@@ -1473,6 +1466,7 @@ section::after {
     display: flex;
     flex-direction: column;
     width: 100%;
+    padding: 16px;
   }
   .story-grid-title {
     border-bottom: 1px solid black;
@@ -1766,7 +1760,7 @@ section::after {
   align-items: center;
   flex-direction: column;
   padding: 50px;
-  margin-top: 50px;
+  margin-top: 120px;
   width: 100%;
 }
 
